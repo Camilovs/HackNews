@@ -1,5 +1,11 @@
 # PruebaHaulmer
 
+**HackNews** es una AppWeb para consultar noticias desde la ApiRest de [Hacker News](https://github.com/HackerNews/API) para mostrar las mejores historias actualmente. 
+
+Este proyecto fue construido como desarrollo a una prueba técnica de la empresa Haulmer, para el puesto de practicante de Front End.
+
+# Dev
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
 ## Development server
