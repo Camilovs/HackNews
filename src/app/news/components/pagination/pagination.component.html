@@ -1,0 +1,22 @@
+<div class="BoxButtons">
+  <button 
+    mat-mini-fab 
+    color="primary" 
+    aria-label="Example icon button with a delete icon"
+    (click)="previous()"
+  >
+    <mat-icon>navigate_before</mat-icon>
+  </button>
+  <span>
+    Page: {{page+1}}
+  </span>
+  <button 
+    mat-mini-fab 
+    color="primary" 
+    aria-label="Example icon button with a delete icon"
+    (click)="next()"
+  >
+    <mat-icon>navigate_next</mat-icon>
+  </button>
+
+</div>

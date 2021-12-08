@@ -1,0 +1,13 @@
+<mat-card class="newCard">
+  <mat-card-title>
+    <h3 class="titleNew"
+    id={{item.url}}
+    (click)="openItem()"
+    >
+    {{(index+1) + (page*limit)}} - {{item.title}}
+  </h3>
+  </mat-card-title>
+  <mat-card-subtitle>
+    {{item.score}} points | by {{item.by}} | {{dateNew}}
+  </mat-card-subtitle>
+</mat-card>
