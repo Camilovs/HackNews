@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 
-// Angular Modules
+// Modulos de Angular
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http'
 
-// My Modules and Components
+// Modulos y componentes propios
 import { AppComponent } from './app.component';
 import { NewsModule } from './news/news.module';
 import { SharedModule } from './shared/shared.module';
@@ -18,8 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
     HttpClientModule,
+    AppRoutingModule,
     NewsModule,
     SharedModule
   ],

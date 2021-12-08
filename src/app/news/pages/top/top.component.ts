@@ -15,6 +15,7 @@ export class TopComponent implements OnInit {
   private _newsResults    :SearchNewResponse[] = [] //Arreglo de noticias luego de consultar cada una de las id de noticias
 
 
+  // Utilizamos el servicio de News
   constructor(private newsService: NewsService) {}
 
   ngOnInit(): void {
@@ -26,11 +27,12 @@ export class TopComponent implements OnInit {
   get limit(){
     return this._limit
   }
+
+  // Metodos para cambiar de pagina
   nextPage=():void =>{
     this.page+=1;
     this.paginateSearch()
   }
-
   previousPage = ():void =>{
     if(this.page>0){
       this.page-=1
@@ -38,6 +40,7 @@ export class TopComponent implements OnInit {
     }
   }
 
+  // Metodo para paginar el arreglo de id's y buscar cada id especificamente y obtener el contenido de las noticias
   paginateSearch(){
     this._newsResults = []
     this._topResultsPag = this._topResults.slice(this.page * this._limit, this._limit * (this.page+1))
@@ -52,6 +55,7 @@ export class TopComponent implements OnInit {
 
   }
 
+  // Metodo para obtener el arreglo de ID's pertenecientes a las mejores historias
   searchTop(){
     this.newsService.searchTopNews().
       subscribe((data)=>{

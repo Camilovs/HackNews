@@ -13,18 +13,20 @@ export class NewsItemComponent implements OnInit {
   @Input() index: number = 0
   @Input() limit: number = 0
   @Input() page: number = 0
-
   public dateNew!: string 
+  
   constructor() { }
 
   ngOnInit(): void {
     this.formateDate()
   }
 
+  // Metodo para abrir la historia en una nueva pestana del navegador
   openItem(){
     window.open(this.item.url, '_blank')!.focus();
   }
 
+  // Arreglo para formatear el string de Date proveido por la api.
   formateDate(){
     var dateUnix = new Date(this.item.time * 1000);
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];

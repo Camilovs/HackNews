@@ -1,13 +1,19 @@
+<!-- Toolbar superior de la app -->
 <header>
   <app-header></app-header>
 </header>
+
+<!-- Body -->
 <body>
+
+  <!-- Contenedor de noticias -->
   <div class="container mainbox">
     <h2>Best News:</h2>
     <div  
       *ngFor="let item of newResults; let i=index" 
       role="listitem"
     >
+      <!-- Noticia particular -->
       <app-news-item 
         [item]='item'
         [index]='i'
@@ -16,6 +22,7 @@
       ></app-news-item>
     </div>
 
+    <!-- Botones de paginacion -->
     <app-pagination
       [previous]='previousPage'
       [next]='nextPage'

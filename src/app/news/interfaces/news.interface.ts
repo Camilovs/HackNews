@@ -1,3 +1,5 @@
+// Interfaz de la respueta para cada historia, obtenida de https://app.quicktype.io/
+
 // To parse this data:
 //
 //   import { Convert, SearchNewResponse } from "./file";
